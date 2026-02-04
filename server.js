@@ -165,7 +165,7 @@ Return JSON in EXACTLY this schema:
 }
 
 Rules:
-- Scores must be 0–100.
+- Scores must be 0–10.
 - Higher score must win.
 - Use "Tie" if scores are the same.
 - Reason must be short (1–3 sentences).
