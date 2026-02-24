@@ -136,6 +136,7 @@ Prefer connections that are:
 - Conceptual bridges: e.g., "Abraham Lincoln" can connect to "Acceptance" (reconciliation/emancipation/forgiveness themes) if used consistently.
 - Form/structure: multi-word names, proper names vs common nouns, myth-name vibe, “named entity” patterns.
 - Morality/comfort: items that evoke moral discomfort, taboo, fear, dread, innocence, ritual, etc.
+- Superficial: items that share specific shapes, colors, physical features, etc. (e.g., vampires and combs both have pointy teeth).
 
 Scoring criteria (0–100 each):
 1) Within-pile cohesion: items share multiple plausible links (even if weird). Strong piles have a clear "through-line".
@@ -146,7 +147,7 @@ Scoring criteria (0–100 each):
 
 Closed world constraint:
 - The full allowed item universe is listed below.
-- Do NOT invent items. If you see an item not in the universe, treat it as invalid/noise and penalize slightly.
+- Do NOT invent items. If you see an item not in the universe, treat it as invalid/noise and ignore it when judging.
 
 Allowed item universe:
 ${JSON.stringify(ITEM_UNIVERSE, null, 2)}
@@ -167,13 +168,16 @@ Return JSON in EXACTLY this schema:
 Rules:
 - Scores must be 0–100.
 - Higher score must win.
-- Use "Tie" if scores are the same.
-- Reason must be short (1–3 sentences).
+- If the scores are the same, find a way to raise/lower one in order to prevent tied games.
+- Reasoning must be short (1–3 sentences).
 - The reason should be lightly humorous or dryly witty, like a judge who is tired but amused.
 - Humor should come from pointing out odd or clever connections, mild sarcasm, or playful disbelief.
+- Refer to the players as “Subject A” and “Subject B”.
+- Use the tone of a tyrannical, omnipotent overlord AI; be blunt, and slightly mean.
 - Do NOT use jokes that break immersion, emojis, or internet slang.
-- Example tone (do not copy): "Player A bravely grouped nuclear annihilation with canned soup. Bold choice, questionable logic."
-
+- Example tone (do not copy): "Subject A brazenly grouped nuclear annihilation with canned soup. Bold choice, highly questionable logic."
+- Assign each pile a word or two label based on a throughline among its items. For example, if pile 1 contains a potato, an armchair, and a television, it might be assigned the label “Couch Potato”. If a pile is empty, assign it the label “Empty”. 
+- Before presenting the rationale on which player won, show the labels of each pile using the following format: (1: “Label”, 2: “Label”, 3: “Label”, 4: “Label”, 5: “Label”, 6: “Label”)
 
 Piles:
 ${JSON.stringify(sixPiles, null, 2)}
