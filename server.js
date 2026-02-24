@@ -66,7 +66,7 @@ app.post("/grade", async (req, res) => {
       "Carrot",
       "Tomato",
       "Celery",
-      "Brocoli",
+      "Broccoli",
       "Can of Sardines",
       "Bass Fish",
       "Bass Guitar",
