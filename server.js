@@ -244,7 +244,7 @@ ${JSON.stringify(sixPiles, null, 2)}
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
-        Authorization: \`Bearer \${process.env.OPENAI_API_KEY}\`,
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -267,7 +267,7 @@ ${JSON.stringify(sixPiles, null, 2)}
       msg?.content?.find((c) => c.type === "output_text")?.text || "";
 
     const cleanedText = outputText
-      .replace(/```json\\s*/gi, "")
+      .replace(/```json\s*/gi, "")
       .replace(/```/g, "")
       .trim();
 
@@ -275,7 +275,7 @@ ${JSON.stringify(sixPiles, null, 2)}
     try {
       result = JSON.parse(cleanedText);
     } catch (e) {
-      console.log("JSON PARSE FAILED. RAW OUTPUT:\\n", outputText);
+      console.log("JSON PARSE FAILED. RAW OUTPUT:\n", outputText);
       return res
         .status(500)
         .json({ error: "Model did not return valid JSON", raw: outputText });
